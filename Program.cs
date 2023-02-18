@@ -2,8 +2,8 @@
 
 using ProgramClass;
 
-string text = UserInput.inputText("Введите слова через запятую:");
+string text = UserInput.inputText("Введите слова через пробел:");
 
 string[] array = ActionsWithArray.GetArrayOfInputUser(text);
 array = ActionsWithArray.GetArrayWithTextMoreFreeChar(array);
-Console.WriteLine(String.Join(", ", array));
+ActionsWithArray.PrintStringArray(array);

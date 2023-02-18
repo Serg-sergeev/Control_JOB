@@ -20,11 +20,25 @@ namespace ProgramClass
     public static class ActionsWithArray
     {
 
-        public static string[] GetArrayOfInputUser(string input)
+        public static void PrintStringArray(string[] array)
+        {
+            Console.WriteLine(array.Length);
+            for(int i = 0; i < array.Length - 2; i++)
+            {
+
+                Console.Write(array[i] + ", ");
+        
+            }
+
+            Console.Write(array[array.Length - 1]);
+
+        }
+
+        public static string[] GetArrayOfInputUser(string input, string? separator = " ")
         {
 
-            string[] array = input.Split(",");
-            
+            string[] array = input.Split(separator);
+            Console.WriteLine(String.Join(",", array));
             return array;
 
         }
@@ -32,7 +46,7 @@ namespace ProgramClass
         public static string[] GetArrayWithTextMoreFreeChar(string[] array, int number = 3)
         {
 
-            string resultText = string.Empty;
+            string resultText = "";
 
             foreach (var elem in array)
             {
@@ -43,7 +57,8 @@ namespace ProgramClass
             }
 
             string[] resultArray = resultText.Split(" ");
-
+            Console.WriteLine(resultArray.Length);
+            Console.WriteLine(String.Join(",", array));
             return resultArray;
 
         }
