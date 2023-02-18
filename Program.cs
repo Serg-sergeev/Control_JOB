@@ -3,3 +3,7 @@
 using ProgramClass;
 
 string text = UserInput.inputText("Введите слова через запятую:");
+
+string[] array = ActionsWithArray.GetArrayOfInputUser(text);
+array = ActionsWithArray.GetArrayWithTextMoreFreeChar(array);
+Console.WriteLine(String.Join(", ", array));
